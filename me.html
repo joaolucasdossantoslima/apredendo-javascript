@@ -8,23 +8,25 @@
         let lEmail=['jl@gmail.com','LS@gmail.com','choro@gamil.com','livre@gmail.com','aguenta@gmail.com']
         let lSenha=['12345','67890','11222','44556','37773']
 
-        console.log()
+        
 
-        let loEmail = prompt('digite seu email: ')
-        let loSenha = prompt('digite sua senha: ')
+        let login = false
 
-
-
-        for(i=0; i==0;){
-        if(loEmail.indexOf(lEmail) & loSenha.indexOf(lSenha)){
-            alert('usuario logado')
-            break
-        }
-                   
-        else{
-            alert('credenciais invalidas')
+        for(;;){
             let loEmail = prompt('digite seu email: ')
             let loSenha = prompt('digite sua senha: ')
+            let loEmailIndex = lEmail.indexOf(loEmail)
+            let loSenhaIndex = lSenha.indexOf(loSenha)
+
+            login=loEmailIndex !== -1 && loEmailIndex === loSenhaIndex;
+            if(!login){
+                alert('credenciais invalidas')
+            }
+
+                   
+        else{
+            alert('usuario logado')
+                break
         }
     }
 
