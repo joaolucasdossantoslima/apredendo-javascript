@@ -276,12 +276,19 @@
       "nome": "Centro-Oeste"
     }
   }
-]
-    for(let i = 0; i < estados.length;i++){
-        if(console.log(estados[i].regiao.sigla)){
-            // let estadosDoSul += (estados[i].regiao.sigla)
-         }//}
-
+];
+   let cont = 0
+   let nordeste=[]
+   for(let i = 0; i < estados.length; i++){
+    if(estados[i].regiao.nome === 'Sul'){
+      cont++
+     }
+     if(estados[i].regiao.nome ==='Nordeste'){
+      nordeste.push(estados[i].nome)
+     }
+   }
+   console.log('Temos '+ cont +' estados na regiao sul')
+   console.log('Temos os seguintes estados no nordeste'+nordeste)
     </script>
 </head>
 <body>
