@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script>
     const pessoas = {
       "results": [
         {
@@ -575,14 +568,8 @@
     let feminino = 0
 
     for (let i = 0; i < pessoas.results.length; i++) {
-  
-
+      if(pessoas.results[i].gender === 'female'){
+        feminino++
+      }
     }
-  </script>
-</head>
-
-<body>
-
-</body>
-
-</html>
+    console.log(feminino)
